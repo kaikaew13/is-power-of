@@ -14,6 +14,8 @@ const ARR = [
 ];
 
 module.exports = (n, baseNum) => {
+  if (typeof n !== 'number' || typeof baseNum !== 'number')
+    throw new Error('only works with numeric inputs');
   if (baseNum > MAX || baseNum < MIN)
     throw new Error('base number is not in the supported range');
   return n > 0 && ARR[baseNum - 1] % n == 0;
