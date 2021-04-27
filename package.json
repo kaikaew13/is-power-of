@@ -1,6 +1,6 @@
 {
   "name": "@kaikaew13/is-power-of",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "find if a number n is a power of a base number between 1 - 10",
   "main": "index.js",
   "keywords": [
