@@ -1,22 +1,22 @@
-const MIN = 1;
-const MAX = 10;
-const ARR = [
-  1,
-  1073741824,
-  1162261467,
-  1073741824,
-  1220703125,
-  362797056,
-  1977326743,
-  1073741824,
-  387420489,
-  1000000000,
-];
+const MIN = 0;
+const MAX = 2147483647;
+const M_SQR = 46340;
 
 module.exports = (n, baseNum) => {
-  if (typeof n !== 'number' || typeof baseNum !== 'number')
-    throw new Error('only works with numeric inputs');
+  if (!Number.isInteger(n) || !Number.isInteger(baseNum))
+    throw new Error('only works with integer');
+
   if (baseNum > MAX || baseNum < MIN)
     throw new Error('base number is not in the supported range');
-  return n > 0 && ARR[baseNum - 1] % n == 0;
+  if (n > MAX || n < MIN) throw new Error('n is not in the supported range');
+  if (baseNum > M_SQR) return n === baseNum;
+  if (baseNum === 1) return n === 1;
+  if (baseNum === 0) return n === 0;
+
+  let baseNumTmp = baseNum;
+  while (baseNumTmp <= MAX) {
+    if (baseNumTmp % n === 0) return true;
+    baseNumTmp *= baseNum;
+  }
+  return false;
 };

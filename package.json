@@ -1,12 +1,19 @@
 {
   "name": "@kaikaew13/is-power-of",
   "version": "1.0.1",
-  "description": "finds if a number n is a power of a base number between 1 - 10",
+  "description": "finds if a number n is a power of a base number between 0 - 2147483647",
   "main": "index.js",
   "keywords": [
     "is-power-of",
     "math",
     "kaikaew13"
   ],
-  "license": "MIT"
+  "license": "MIT",
+  "devDependencies": {
+    "chai": "^4.3.4",
+    "mocha": "^8.3.2"
+  },
+  "scripts": {
+    "test": "mocha"
+  }
 }
