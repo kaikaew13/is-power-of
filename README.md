@@ -17,16 +17,16 @@ npm i @kaikaew13/is-power-of
 
 ## How to use
 
-```js
+```javascript
 const isPowerOf = require('@kaikaew13/is-power-of);
 
-console.log(isPowerOf(128,2)); // true;
+console.log(isPowerOf(128,2)); // true
 
-console.log(isPowerOf(2147395600, 46340)); // true;
+console.log(isPowerOf(2147395600, 46340)); // true
 
-console.log(isPowerOf(128,5)); // false;
+console.log(isPowerOf(128,5)); // false
 
-console.log(isPowerOf(4,-1)); // Error: base number is not in the supported range;
+console.log(isPowerOf(4,-1)); // Error: base number is not in the supported range
 
-console.log(isPowerOf('hi','hello')) // Error: only works with integer;
+console.log(isPowerOf('hi','hello')) // Error: only works with integer
 ```
