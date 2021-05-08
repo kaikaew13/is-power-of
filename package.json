@@ -1,6 +1,6 @@
 {
   "name": "@kaikaew13/is-power-of",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "description": "finds if a number n is a power of a base number between 0 - 2147483647",
   "main": "index.js",
   "keywords": [
