@@ -12,6 +12,7 @@ module.exports = (n, baseNum) => {
   if (baseNum > M_SQR) return n === baseNum;
   if (baseNum === 1) return n === 1;
   if (baseNum === 0) return n === 0;
+  if (baseNum > n) return false;
 
   let baseNumTmp = baseNum;
   while (baseNumTmp <= MAX) {
